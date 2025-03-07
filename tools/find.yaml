@@ -1,0 +1,56 @@
+identity:
+  name: find
+  author: zgh551
+  label:
+    en_US: find
+    zh_Hans: 查询数据库
+    pt_BR: mongo
+description:
+  human:
+    en_US: this for Mongo dataset api
+    zh_Hans: this for Mongo dataset api
+    pt_BR: this for Mongo dataset api
+  llm: this for Mongo dataset api
+parameters:
+  - name: database_name
+    type: string
+    required: true
+    label:
+      en_US: Database Name
+      zh_Hans: 数据库名
+      pt_BR: Database
+    human_description:
+      en_US: this for Mongo dataset api
+      zh_Hans: this for Mongo dataset api
+      pt_BR: this for Mongo dataset api
+    llm_description: this for Mongo dataset api
+    form: llm
+  - name: collection_name
+    type: string
+    required: true
+    label:
+      en_US: Collection Name
+      zh_Hans: 收集器名
+      pt_BR: Collection Name
+    human_description:
+      en_US: this for Mongo dataset api
+      zh_Hans: this for Mongo dataset api
+      pt_BR: this for Mongo dataset api
+    llm_description: this for Mongo dataset api
+    form: llm
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query Data
+      zh_Hans: 查询数据
+      pt_BR: Query Data
+    human_description:
+      en_US: this for Mongo dataset api
+      zh_Hans: this for Mongo dataset api
+      pt_BR: this for Mongo dataset api
+    llm_description: this for Mongo dataset api
+    form: llm
+extra:
+  python:
+    source: tools/find.py

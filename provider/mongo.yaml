@@ -1,0 +1,55 @@
+identity:
+  author: zgh551
+  name: mongo
+  label:
+    en_US: mongo
+    zh_Hans: mongo
+    pt_BR: mongo
+  description:
+    en_US: this for Mongo dataset api
+    zh_Hans: this for Mongo dataset api
+    pt_BR: this for Mongo dataset api
+  icon: mongodb-icon.svg
+credentials_for_provider:
+  uri:
+    type: text-input
+    required: true
+    label:
+      en_US: Connect URI
+      zh_Hans: 连接URI
+    placeholder:
+      en_US: mongodb://local:27017
+      zh_Hans: mongodb://local:27017
+    help:
+      en_US: Get your SerpApi API key from SerpApi
+      zh_Hans: 从 SerpApi 获取您的 SerpApi API key
+  username:
+    type: text-input
+    required: true
+    label:
+      en_US: User Name
+      zh_Hans: 用户名
+    placeholder:
+      en_US: Please input your user name
+      zh_Hans: 请输入你的用户名
+    help:
+      en_US: Get your SerpApi API key from SerpApi
+      zh_Hans: 从 SerpApi 获取您的 SerpApi API key
+  password:
+    type: secret-input
+    required: true
+    label:
+      en_US: User password
+      zh_Hans: 用户密码
+    placeholder:
+      en_US: Please input your user name
+      zh_Hans: 请输入你的用户密码
+    help:
+      en_US: Get your SerpApi API key from SerpApi
+      zh_Hans: 从 SerpApi 获取您的 SerpApi API key
+tools:
+  - tools/find.yaml
+  - tools/GridFS.yaml
+extra:
+  python:
+    source: provider/mongo.py

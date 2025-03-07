@@ -1,0 +1,72 @@
+identity:
+  name: GridFS
+  author: zgh551
+  label:
+    en_US: GridFS
+    zh_Hans: 查询二进制文件
+    pt_BR: mongo
+description:
+  human:
+    en_US: this for Mongo dataset api
+    zh_Hans: this for Mongo dataset api
+    pt_BR: this for Mongo dataset api
+  llm: this for Mongo dataset api
+parameters:
+  - name: database_name
+    type: string
+    required: true
+    label:
+      en_US: Database Name
+      zh_Hans: 数据库名
+      pt_BR: Database
+    human_description:
+      en_US: this for Mongo dataset api
+      zh_Hans: this for Mongo dataset api
+      pt_BR: this for Mongo dataset api
+    llm_description: this for Mongo dataset api
+    form: llm
+  - name: collection_name
+    type: string
+    required: true
+    label:
+      en_US: Collection Name
+      zh_Hans: 收集器名
+    human_description:
+      en_US: this for Mongo dataset api
+      zh_Hans: this for Mongo dataset api
+    llm_description: this for Mongo dataset api
+    form: llm
+  - name: file_id
+    type: string
+    required: true
+    label:
+      en_US: File ID
+      zh_Hans: 文件ID
+      pt_BR: Query Data
+    human_description:
+      en_US: this for Mongo file id
+      zh_Hans: 配置文件的ID号
+    llm_description: this for Mongo dataset api
+    form: llm
+  - name: output_type
+    label:
+      en_US: output format
+      zh_Hans: 输出格式
+    options:
+    - label:
+        en_US: files
+      value: files
+    - label:
+        en_US: text
+      value: text
+    human_description:
+      en_US: this for setup output format
+      zh_Hans: 用于设置输出格式
+    llm_description: this for Mongo dataset api
+    required: false
+    default: text
+    type: select
+    form: form
+extra:
+  python:
+    source: tools/GridFS.py
