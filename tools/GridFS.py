@@ -40,6 +40,7 @@ class GridFSTool(Tool):
         out = gridfs.get(base64_to_objectid(tool_parameters["file_id"]))
         binary_data = out.read()
         output_format = tool_parameters.get("output_type", "text")
+        client.close()
         if output_format == "files":
             yield self.create_blob_message(binary_data)
         else:

@@ -15,7 +15,8 @@ class MongoProvider(ToolProvider):
                         username=credentials["username"],
                         password=credentials["password"])
             server_info = client.server_info()
-            print("connect MongoDB Success!")
+            print("connect MongoDB Success:", server_info)
+            client.close()
         except Exception as e:
             raise ToolProviderCredentialValidationError(str(e))
         finally:

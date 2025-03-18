@@ -51,6 +51,25 @@ parameters:
       pt_BR: this for Mongo dataset api
     llm_description: this for Mongo dataset api
     form: llm
+  - name: output_type
+    label:
+      en_US: output format
+      zh_Hans: 输出格式
+    options:
+    - label:
+        en_US: json
+      value: json
+    - label:
+        en_US: text
+      value: text
+    human_description:
+      en_US: setup output format json or text
+      zh_Hans: 设置输出格式,目前可选json或text
+    llm_description: this for Mongo dataset api
+    required: false
+    default: text
+    type: select
+    form: form
 extra:
   python:
     source: tools/find.py
