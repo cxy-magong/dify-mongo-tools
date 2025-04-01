@@ -1,6 +1,6 @@
 identity:
   name: GridFS
-  author: zgh551
+  author: mrh
   label:
     en_US: GridFS
     zh_Hans: 查询二进制文件

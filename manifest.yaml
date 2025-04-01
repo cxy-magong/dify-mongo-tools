@@ -1,12 +1,12 @@
 version: 0.0.1
 type: plugin
-author: zgh551
-name: mongo
+author: mrh
+name: mongo_db
 label:
-  en_US: mongo
-  ja_JP: mongo
-  zh_Hans: mongo
-  pt_BR: mongo
+  en_US: mongo_db
+  ja_JP: mongo_db
+  zh_Hans: mongo_db
+  pt_BR: mongo_db
 description:
   en_US: this for Mongo dataset api
   ja_JP: this for Mongo dataset api

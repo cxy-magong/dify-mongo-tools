@@ -1,10 +1,10 @@
 identity:
-  author: zgh551
-  name: mongo
+  author: mrh
+  name: mongo_db
   label:
-    en_US: mongo
-    zh_Hans: mongo
-    pt_BR: mongo
+    en_US: mongo_db
+    zh_Hans: mongo_db
+    pt_BR: mongo_db
   description:
     en_US: this for Mongo dataset api
     zh_Hans: this for Mongo dataset api
