@@ -50,6 +50,7 @@ credentials_for_provider:
 tools:
   - tools/find.yaml
   - tools/GridFS.yaml
+  - tools/aggregate.yaml
 extra:
   python:
     source: provider/mongo.py

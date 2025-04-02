@@ -20,5 +20,5 @@ class MongoProvider(ToolProvider):
         except Exception as e:
             raise ToolProviderCredentialValidationError(str(e))
         finally:
-            if client:
+            if "client" in locals():
                 client.close()

@@ -1,0 +1,81 @@
+identity:
+  name: aggregate
+  author: mrh
+  label:
+    en_US: aggregate
+    zh_Hans: 聚合查询
+    pt_BR: aggregate
+description:
+  human:
+    en_US: this for Mongo dataset api
+    zh_Hans: 数据管道聚合操作
+    pt_BR: this for Mongo dataset api
+  llm: Data pipeline aggregation operation api
+parameters:
+  - name: database_name
+    type: string
+    required: true
+    label:
+      en_US: Database Name
+      zh_Hans: 数据库名
+      pt_BR: Database
+    human_description:
+      en_US: Name of the MongoDB database for aggregation
+      zh_Hans: 要进行聚合操作的MongoDB数据库名称
+      pt_BR: Nome do banco de dados MongoDB para agregação
+    llm_description: Name of the MongoDB database for aggregation
+    form: llm
+  - name: collection_name
+    type: string
+    required: true
+    label:
+      en_US: Collection Name
+      zh_Hans: 集合名
+      pt_BR: Collection Name
+    human_description:
+      en_US: Name of the MongoDB collection for aggregation
+      zh_Hans: 要进行聚合操作的MongoDB集合名称
+      pt_BR: Nome da coleção MongoDB para agregação
+    llm_description: Name of the MongoDB collection for aggregation
+    form: llm
+  - name: pipeline
+    type: string
+    required: true
+    label:
+      en_US: Aggregation Pipeline
+      zh_Hans: 聚合管道
+      pt_BR: Pipeline de Agregação
+    human_description:
+      en_US: MongoDB aggregation pipeline in JSON array format
+      zh_Hans: MongoDB聚合管道(JSON数组格式)
+      pt_BR: Pipeline de agregação MongoDB em formato JSON
+    llm_description: MongoDB aggregation pipeline in JSON array format
+    form: llm
+    description: |
+      使用JSON数组格式的聚合阶段，例如 [{"$match": {}}, {"$project": {}}]
+  - name: output_type
+    required: false
+    label:
+      en_US: Output Format
+      zh_Hans: 输出格式
+      pt_BR: Formato de Saída
+    options:
+      - label:
+          en_US: text
+          zh_Hans: 文本
+        value: text
+      - label:
+          en_US: json
+          zh_Hans: JSON
+        value: json
+    human_description:
+      en_US: Output format for aggregation results
+      zh_Hans: 聚合结果的输出格式
+      pt_BR: Formato de saída para resultados de agregação
+    llm_description: Output format for aggregation results
+    default: text
+    type: select
+    form: form
+extra:
+  python:
+    source: tools/aggregate.py
